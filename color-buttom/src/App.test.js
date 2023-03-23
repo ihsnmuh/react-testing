@@ -41,7 +41,7 @@ test("Checkbox disables botton on first click and enable on second click", () =>
   expect(colorButton).toBeEnabled()
 
   // check the checkbox starts out unchecked
-  const checkBox = screen.getByRole("checkbox")
+  const checkBox = screen.getByRole("checkbox", {name: "Disable checkbox"})
   expect(checkBox).not.toBeChecked()
 
   fireEvent.click(checkBox)
